@@ -1,0 +1,29 @@
+.stoplight {
+  border: 1px solid #000;
+  display: inline-block;
+}
+
+.light {
+  border-radius: 50%;
+  height: 50px;
+  margin: 10px;
+  opacity: 0.1;
+  transition: opacity 0.5s;
+  width: 50px;
+}
+
+.light--stop {
+  background-color: red;
+}
+
+.light--yield {
+  background-color: yellow;
+}
+
+.light--go {
+  background-color: green;
+}
+
+.light.is-active {
+  opacity: 1;
+}
