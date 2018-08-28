@@ -16,11 +16,13 @@ buttons.forEach(function(button) {
     const lightToActivate = e.target.dataset.light;
     lights.forEach(function(light) {
 		//code goes here
-		if(light.classList.contains(lightToActivate)){
-			light.classList.toggle('is-active');
+		light.classList.toggle('is-active', light.classList.contains(lightToActivate));
+		
+		if(lightToActivate == 'enable-all'){
+			light.classList.add('is-active');
+		} else if (lightToActivate == 'disable-all'){
+			light.classList.remove('is-active');
 		}
-		
-		
     });
   });
 });
